@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function smallestInCol(mat, n, m) {
+        for (let i = 0; i < m; i++) {
+          // initialize the minimum element
+          // as first element
+          let minm = mat[0][i];
+
+          // Run the inner loop for columns
+          for (let j = 1; j < n; j++) {
+        
+            if (mat[j][i] < minm) {
+              minm = mat[j][i];
+            
+              
+            }
+            
+          }
+
+          console.log(minm);
+              return;
+        }
+      }
+
+      // Driver code
+
+      let n = 3,
+        m = 3;
+      let mat = [
+        [8, 2, 1],
+        [3, 5, 6],
+        [4, 5, 6],
+      ];
+
+      document.write("\nMinimum element of each column is ");
+      smallestInCol(mat, n, m);
+
+      // This code is contributed by Bobby
+    </script>
+  </body>
+</html>
